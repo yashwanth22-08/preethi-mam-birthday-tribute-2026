@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-cinzel: 'Cinzel', Georgia, serif;
+    --font-editorial: 'Cormorant Garamond', Garamond, Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF8F5;
+    color: #2D241E;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+/* Subtle gold metallic shimmer */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #7C5824 0%, #B8860B 35%, #D4AF37 55%, #8B6508 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border: 1px solid rgba(197, 160, 89, 0.35);
+}
+
+.gold-subtle-glow {
+  box-shadow: 0 10px 30px -10px rgba(184, 134, 11, 0.15);
+}
+
+/* Candle flame flicker */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.8));
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(1.5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.95));
+  }
+  50% {
+    transform: scale(0.96, 1.05) rotate(-2deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.7));
+  }
+  75% {
+    transform: scale(1.04, 1.02) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.85));
+  }
+}
+
+.candle-flame {
+  animation: flameFlicker 2.5s infinite ease-in-out;
+  transform-origin: bottom center;
+}
+
+/* Parchment paper texture subtle background */
+.parchment-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF7F2 100%);
+  border: 1px solid rgba(212, 187, 145, 0.4);
+}
